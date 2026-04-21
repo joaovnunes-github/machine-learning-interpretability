@@ -1,8 +1,9 @@
 import pytest
 from sklearn.pipeline import Pipeline
-from src.models import train_decision_tree, train_knn, train_naive_bayes
+from sklearn.tree import DecisionTreeClassifier
 
 from src.data import load_data, split_data
+from src.models import train_decision_tree, train_knn, train_naive_bayes
 
 DATA_PATH = "data/heart_failure_clinical_records_dataset.csv"
 
@@ -16,10 +17,10 @@ def data():
 # --- Decision Tree ---
 
 
-def test_train_decision_tree_returns_pipeline(data):
+def test_train_decision_tree_returns_classifier(data):
     X_train, X_test, y_train, y_test = data
-    pipe = train_decision_tree(X_train, y_train)
-    assert isinstance(pipe, Pipeline)
+    dt = train_decision_tree(X_train, y_train)
+    assert isinstance(dt, DecisionTreeClassifier)
 
 
 def test_train_decision_tree_predict_runs(data):

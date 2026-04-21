@@ -1,5 +1,6 @@
 import pandas as pd
 import pytest
+
 from src.data import load_data, split_data
 
 DATA_PATH = "data/heart_failure_clinical_records_dataset.csv"
@@ -7,13 +8,14 @@ DATA_PATH = "data/heart_failure_clinical_records_dataset.csv"
 
 def test_load_data_shapes():
     X, y = load_data(DATA_PATH)
-    assert X.shape == (299, 12)
+    assert X.shape == (299, 11)
     assert y.shape == (299,)
 
 
 def test_load_data_target_not_in_features():
     X, y = load_data(DATA_PATH)
     assert "DEATH_EVENT" not in X.columns
+    assert "time" not in X.columns
 
 
 def test_load_data_target_name():

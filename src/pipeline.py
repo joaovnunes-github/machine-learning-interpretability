@@ -9,7 +9,6 @@ CONTINUOUS_COLS = [
     "platelets",
     "serum_creatinine",
     "serum_sodium",
-    "time",
 ]
 
 BINARY_COLS = [
