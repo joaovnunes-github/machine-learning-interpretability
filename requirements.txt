@@ -1,0 +1,13 @@
+pandas
+pandas-stubs
+numpy
+scikit-learn
+shap
+lime
+matplotlib
+seaborn
+jupyter
+notebook
+ipykernel
+pytest
+pyflakes

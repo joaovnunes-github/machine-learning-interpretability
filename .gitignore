@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environments
+.env
+venv/
+.venv/
+
+# Dataset (not committed)
+data/*.csv
+
+# Outputs (generated at runtime)
+outputs/
+
+# OS
+.DS_Store
+Thumbs.db
